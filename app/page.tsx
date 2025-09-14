@@ -1,6 +1,8 @@
 import Image from "next/image";
 
-import styles from './index.module.scss'
+import styles from './styles.module.scss'
+
+import { InfiniteCarousel } from "./components/InfiniteCarousel"
 
 export default function Home() {
   console.log('Object.keys', Object.keys(styles))
@@ -65,27 +67,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={styles.animationArea}>
-            <div>
-              <h2>JavaScript</h2>
-
-              <h2>Typescript</h2>
-
-              <h2>Docker</h2>
-
-              <h2>Git</h2>
-            </div>
-
-            <div aria-hidden={true}>
-              <h2>JavaScript</h2>
-
-              <h2>Typescript</h2>
-
-              <h2>Docker</h2>
-
-              <h2>Git</h2>
-            </div>
-          </div>
+          <InfiniteCarousel
+            items={['JavaScript', 'TypeScript', 'Docker', 'Git', 'Jest', 'Cypress']}
+          />
         </section>
       </main>
     </div>
