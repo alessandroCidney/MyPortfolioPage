@@ -30,8 +30,19 @@ body {
   margin: 0;
 
   font-family: Inter, sans-serif;
+
+  box-sizing: border-box;
 }
 
 body {
   background-color: #212121;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.05em;
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: -0.01em;
 }
