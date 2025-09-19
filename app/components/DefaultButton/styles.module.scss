@@ -1,5 +1,6 @@
 .defaultButton {
   min-width: 150px;
+  display: inline-block;
   
   padding: 10px 20px;
 
@@ -12,6 +13,20 @@
   border-radius: 9999px;
 
   transition: .1s ease-in-out all;
+
+  &.text {
+    background-color: transparent;
+    color: #FFF;
+
+    border: 3px solid transparent;
+
+    &:hover {
+      outline: 4px solid #FFF;
+      border: 3px solid #212121;
+      background-color: #FFF;
+      color: #000;
+    }
+  }
 
   &.outlined {
     outline: 4px solid transparent;
@@ -31,14 +46,32 @@
   &.flat {
     border: 0;
 
-    background-color: #fff;
+    background-color: #FFF;
     color: #000;
 
-    border: 3px solid #fff;
+    border: 3px solid #FFF;
 
     &:hover {
-      outline: 4px solid #fff;
+      outline: 4px solid #FFF;
       border: 3px solid #000;
     }
+
+    &.primary {
+      background-color: var(--theme-primary-color);
+      color: #fff;
+
+      border: 3px solid var(--theme-primary-color);
+
+      &:hover {
+        outline: 4px solid var(--theme-primary-color);
+        border: 3px solid #000;
+      }
+    }
+  }
+
+  &.large {
+    font-size: 1.5rem;
+
+    padding: 15px 30px;
   }
 }

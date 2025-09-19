@@ -1,49 +1,77 @@
-.infiniteCarousel {
-  --infinite-carousel-base-width: 1200px;
-
-  width: var(--infinite-carousel-base-width);
-  max-width: 90%;
-  height: 100px;
-
-  // border: 1px solid white;
-
+.infiniteCarouselContainer {
   margin: auto;
+
+  position: relative;
+
+  width: 1200px;
+  max-width: 100%;
+  height: 100px;
+}
+
+.infiniteCarousel {
+  width: 100%;
+  height: 100%;
 
   overflow: hidden;
 
   display: flex;
+
+  &::before {
+    content: '';
+
+    width: 100px;
+    height: 100px;
+
+    background: linear-gradient(90deg, #010128 50%, transparent);
+
+    position: absolute;
+    left: 0;
+
+    z-index: 2;
+  }
+
+  &::after {
+    content: '';
+
+    width: 100px;
+    height: 100px;
+
+    background: linear-gradient(270deg, #010128 50%, transparent);
+
+    position: absolute;
+    right: 0;
+
+    z-index: 2;
+  }
 
   .carouselList {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    flex: 0 0 100%;
-
+    flex: 1 1 0;
     height: 100%;
 
     will-change: transform;
-    animation: carrousel 20s linear infinite;
+    animation: carrousel 50s linear infinite;
+
+    position: relative;
 
     .carouselItem {
-      // border: 1px solid white;
-
-      width: calc(var(--infinite-carousel-base-width) / 6);
-      // min-width: 200px;
+      white-space: nowrap;
       height: 100%;
+
+      padding: 0 50px;
 
       text-align: center;
 
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-  }
-}
 
-@media(max-width: calc(var(--infinite-carousel-base-width) / 0.9)) {
-  .infiniteCarousel .carouselList .carouselItem {
-    width: calc(90% / 6);
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
   }
 }
 

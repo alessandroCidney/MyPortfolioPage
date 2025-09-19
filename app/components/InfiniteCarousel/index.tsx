@@ -7,22 +7,28 @@ interface InfiniteCarouselProps {
 export function InfiniteCarousel(props: InfiniteCarouselProps) {
   function CarouselList() {
     const listItems = props.items.map((item, itemIndex) => (
-      <h3
+      <li
         key={`itemIndex${itemIndex}`}
         className={styles.carouselItem}
       >
         { item }
-      </h3>
+      </li>
     ))
 
-    return <div className={styles.carouselList}>{listItems}</div>
+    return (
+      <ul className={styles.carouselList}>
+        {listItems}
+      </ul>
+    )
   }
 
   return (
-    <div className={styles.infiniteCarousel}>
-      <CarouselList />
+    <div className={styles.infiniteCarouselContainer}>
+      <div className={styles.infiniteCarousel}>
+        <CarouselList />
 
-      <CarouselList aria-hidden={true} />
+        <CarouselList aria-hidden={true} />
+      </div>
     </div>
   )
 }

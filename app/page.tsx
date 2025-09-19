@@ -5,6 +5,7 @@ import styles from './styles.module.scss'
 import { InfiniteCarousel } from "./components/InfiniteCarousel"
 import { DefaultButton } from "./components/DefaultButton";
 import { HorizontalList } from "./components/HorizontalList";
+import { ExperienceCard } from "./components/ExperienceCard";
 
 export default function Home() {
   const experienceCardsData = [
@@ -158,7 +159,29 @@ export default function Home() {
           </div>
 
           <InfiniteCarousel
-            items={['JavaScript', 'TypeScript', 'Docker', 'Git', 'Jest', 'Cypress']}
+            items={[
+              'JavaScript',
+              'TypeScript',
+              'Vue.js',
+              'Nuxt.js',
+              'React.js',
+              'Next.js',
+              'HTML5',
+              'CSS3',
+              'Sass',
+              'Firebase',
+              'Google Cloud Platform',
+              'Docker',
+              'WebSocket',
+              'Git',
+              'Bitbucket',
+              'Jest',
+              'Cypress',
+              'Selenium',
+              'Scrum',
+              'Kanban',
+              'Figma',
+            ]}
           />
 
           <div className={styles.personArmsCrossed} />
@@ -219,13 +242,13 @@ export default function Home() {
                 SantoDigital
               </h3>
 
-              <p>
-                Empresa que atua no setor de Cloud, oferecendo serviços como modernização de estrutura, análise de dados, integração com o ecossistema Google e diversos produtos baseados em IA.
-              </p>
-
               <div className={styles.companyDate}>
                 2021 - 2025
               </div>
+
+              <p>
+                Empresa que atua no setor de Cloud, oferecendo serviços como modernização de estrutura, análise de dados, integração com o ecossistema Google e diversos produtos baseados em IA.
+              </p>
 
               <DefaultButton>
                 Acessar Website
@@ -235,34 +258,67 @@ export default function Home() {
             <div className={styles.experienceCards}>
               {
                 experienceCardsData.map((cardData, cardDataIndex) => (
-                  <div
-                    className={styles.experienceCard}
+                  <ExperienceCard
                     key={`cardDataIndex${cardDataIndex}`}
-                  >
-                    <div className={styles.experienceCardTitleArea}>
-                      <h4>
-                        { cardData.title }
-                      </h4>
-
-                      <div>
-                        { cardData.date }
-                      </div>
-                    </div>
-
-                    <p>
-                      { cardData.description }
-                    </p>
-
-                    <HorizontalList
-                      items={cardData.technologies}
-                    />
-                  </div>
+                    title={cardData.title}
+                    date={cardData.date}
+                    description={cardData.description}
+                    technologies={cardData.technologies}
+                  />
                 ))
               }
             </div>
           </div>
         </section>
+
+        <section className={styles.fifthSection}>
+
+        </section>
       </main>
+
+      <footer className={styles.defaultFooter}>
+        <div className={styles.footerTitleArea}>
+          <h2>
+            Vamos trabalhar<br />juntos?
+          </h2>
+
+          <div>
+            <DefaultButton
+              variant="flat"
+              primary
+              large
+            >
+              Mande uma mensagem
+            </DefaultButton>
+          </div>
+        </div>
+
+        <div className={styles.copyRightArea}>
+          <span className={styles.copyRightText}>
+            Copyright © 2025 Alessandro Cídney
+          </span>
+
+          <div className={styles.centerButtons}>
+            <DefaultButton>
+              Mandar e-mail
+            </DefaultButton>
+
+            <DefaultButton>
+              Github
+            </DefaultButton>
+
+            <DefaultButton>
+              Instagram
+            </DefaultButton>
+          </div>
+
+          <div className={styles.backToTop}>
+            <DefaultButton variant="text">
+              Voltar ao início
+            </DefaultButton>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
