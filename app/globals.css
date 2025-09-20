@@ -52,3 +52,9 @@ p {
   line-height: 1.5;
   letter-spacing: -0.01em;
 }
+
+@media (max-width: 960px) {
+  &:root {
+    font-size: 0.8rem;
+  }
+}

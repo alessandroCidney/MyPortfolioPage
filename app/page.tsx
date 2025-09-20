@@ -139,25 +139,27 @@ export default function Home() {
 
       <main className={styles.defaultMain}>
         <section className={styles.firstSection}>
-          <div className={styles.titleImageContainer} />
+          <div className={styles.textContainer}>            
+            <div className={styles.titleImageContainer} />
+
+            <div className={styles.introductionLeftText}>
+              <p>
+                Olá, bem vindo ao meu portfólio! Me chamo <strong>Alessandro Cídney</strong>, e sou um <strong>desenvolvedor web</strong> apaixonado por construir interfaces incríveis.
+              </p>
+
+              <DefaultButton
+                variant="flat"
+                appendIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
+                href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
+                target='_blank'
+                link
+              >
+                Contratar
+              </DefaultButton>
+            </div>
+          </div>
 
           <div className={styles.personImageContainer} />
-
-          <div className={styles.introductionLeftText}>
-            <p>
-              Olá, bem vindo ao meu portfólio! Me chamo <strong>Alessandro Cídney</strong>, e sou um <strong>desenvolvedor web</strong> apaixonado por construir interfaces incríveis.
-            </p>
-
-            <DefaultButton
-              variant="flat"
-              appendIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
-              href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
-              target='_blank'
-              link
-            >
-              Contratar
-            </DefaultButton>
-          </div>
         </section>
 
         <section className={styles.secondSection}>

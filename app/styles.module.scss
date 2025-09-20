@@ -88,24 +88,40 @@ main.defaultMain {
 
       margin: 0px 20px;
 
-      .titleImageContainer {
-        background-image: url('/images/texts/developer.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-
-        position: absolute;
-
-        top: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-
+      .textContainer {
         width: 90%;
-        aspect-ratio: 1754 / 389;
+
+        margin: 5% auto auto auto;
+
+        .titleImageContainer {
+          background-image: url('/images/texts/developer.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+
+          width: 100%;
+          aspect-ratio: 1754 / 389;
+
+          margin-bottom: -30px;
+        }
+
+        .introductionLeftText {
+          max-width: 500px;
+
+          position: relative;
+          z-index: 2;
+
+          p {
+            font-weight: 500;
+            font-size: 1.2rem;
+
+            margin-bottom: 20px;
+          }
+        }
       }
 
       .personImageContainer {
-        background-image: url('/images/illustrations/person-like.png');
+        background-image: url('/images/illustrations/centered-person-like.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center bottom;
@@ -115,22 +131,6 @@ main.defaultMain {
 
         position: absolute;
         bottom: 0;
-      }
-
-      .introductionLeftText {
-        position: absolute;
-        
-        top: 55%;
-        left: 5%;
-
-        max-width: 500px;
-
-        p {
-          font-weight: 500;
-          font-size: 1.2rem;
-
-          margin-bottom: 20px;
-        }
       }
     }
 
@@ -355,7 +355,11 @@ footer.defaultFooter {
 }
 
 @media (max-width: 1280px) {
-  
+  header.defaultHeader {
+    nav.defaultNav {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 960px) {
@@ -367,6 +371,50 @@ footer.defaultFooter {
 
   main.defaultMain {
     section {
+      &.firstSection {
+        height: auto;
+
+        position: relative;
+
+        border-radius: 0;
+
+        margin: 0px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .textContainer {
+          width: 90%;
+
+          margin-top: 50px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          .introductionLeftText {
+            text-align: center;
+
+            margin: 30px auto;
+          }
+        }
+
+        .personImageContainer {
+          background-image: url('/images/illustrations/person-like.png');
+
+          // width: auto;
+          height: 389px;
+
+          // flex: 1 1 0;
+
+          position: relative;
+          bottom: auto;
+        }
+      }
+
       &.thirdSection {
         .contentContainer {
           display: block;
@@ -389,6 +437,8 @@ footer.defaultFooter {
       &.fourthSection {
         .contentContainer {
           .companyTitle {
+            padding: 0 20px 20px 20px;
+
             .companyDate {
               position: relative;
 
@@ -401,6 +451,23 @@ footer.defaultFooter {
               max-width: 100%;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 2560px) {
+  main.defaultMain {
+    section {
+      &.firstSection {
+        height: auto;
+        min-height: 900px;
+
+        .textContainer {
+          margin: 100px auto auto auto;
+
+          max-width: 2000px;
         }
       }
     }
