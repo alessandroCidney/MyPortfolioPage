@@ -4,8 +4,10 @@ import styles from './styles.module.scss'
 
 import { InfiniteCarousel } from "./components/InfiniteCarousel"
 import { DefaultButton } from "./components/DefaultButton";
-import { HorizontalList } from "./components/HorizontalList";
 import { ExperienceCard } from "./components/ExperienceCard";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const experienceCardsData = [
@@ -125,7 +127,12 @@ export default function Home() {
           </ul>
         </nav>
 
-        <DefaultButton>
+        <DefaultButton
+          appendIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
+          href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
+          target='_blank'
+          link
+        >
           Falar
         </DefaultButton>
       </header>
@@ -141,7 +148,13 @@ export default function Home() {
               Olá, bem vindo ao meu portfólio! Me chamo <strong>Alessandro Cídney</strong>, e sou um <strong>desenvolvedor web</strong> apaixonado por construir interfaces incríveis.
             </p>
 
-            <DefaultButton variant="flat">
+            <DefaultButton
+              variant="flat"
+              appendIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
+              href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
+              target='_blank'
+              link
+            >
               Contratar
             </DefaultButton>
           </div>
@@ -216,7 +229,12 @@ export default function Home() {
                 Precisa de apoio na sua empresa?
               </p>
 
-              <DefaultButton>
+              <DefaultButton
+                appendIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
+                href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
+                target='_blank'
+                link
+              >
                 Mande uma mensagem
               </DefaultButton>
             </div>
@@ -250,7 +268,12 @@ export default function Home() {
                 Empresa que atua no setor de Cloud, oferecendo serviços como modernização de estrutura, análise de dados, integração com o ecossistema Google e diversos produtos baseados em IA.
               </p>
 
-              <DefaultButton>
+              <DefaultButton
+                appendIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
+                href='https://santodigital.com.br'
+                target='_blank'
+                link
+              >
                 Acessar Website
               </DefaultButton>
             </div>
@@ -285,6 +308,9 @@ export default function Home() {
           <div>
             <DefaultButton
               variant="flat"
+              href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
+              target='_blank'
+              link
               primary
               large
             >
