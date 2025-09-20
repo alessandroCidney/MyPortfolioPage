@@ -1,4 +1,7 @@
+'use client'
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 import styles from './styles.module.scss'
 
@@ -10,6 +13,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
+  const [fixedHeader, setFixedHeader] = useState(false)
+
+  console.log('render')
+
   const experienceCardsData = [
     {
       title: 'Desenvolvedor Front-end Pleno',
@@ -88,10 +95,58 @@ export default function Home() {
       ],
     }
   ]
+  
+  function debounce (callback: () => void, wait: number) {
+    let timeoutId: number
+
+    return () => {
+      window.clearTimeout(timeoutId)
+
+      timeoutId = window.setTimeout(() => {
+        callback()
+      }, wait)
+    };
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }
+
+  function getScrollPercent() {
+    // https://stackoverflow.com/questions/2387136/cross-browser-method-to-determine-vertical-scroll-percentage-in-javascript
+
+    const currentScroll = document.documentElement.scrollTop || document.body.scrollTop
+    const totalScroll = (document.documentElement.scrollHeight || document.body.scrollHeight) - document.documentElement.clientHeight
+
+    return Math.floor(currentScroll / totalScroll * 100);
+  }
+
+  function checkScroll() {
+    console.log('checkScroll')
+
+    setFixedHeader(getScrollPercent() > 15)
+  }
+
+  const debouncedCheckScroll = debounce(checkScroll, 50)
+
+  useEffect(() => {
+    console.log('start render')
+    window.addEventListener('scroll', debouncedCheckScroll)
+
+    return () => {
+      console.log('end render')
+      window.removeEventListener('scroll', debouncedCheckScroll)
+    }
+  }, [checkScroll])
 
   return (
     <div>
-      <header className={styles.defaultHeader}>
+      <header
+        className={[
+          styles.defaultHeader,
+          fixedHeader ? styles.fixedHeader : ''
+        ].join(' ')}
+      >
         <Image
           src='/images/texts/ac.png'
           alt='Meu nome'
@@ -109,13 +164,13 @@ export default function Home() {
 
             <li>
               <a>
-                Experiência
+                Sobre mim
               </a>
             </li>
 
             <li>
               <a>
-                Sobre mim
+                Experiência
               </a>
             </li>
 
@@ -341,7 +396,10 @@ export default function Home() {
           </div>
 
           <div className={styles.backToTop}>
-            <DefaultButton variant="text">
+            <DefaultButton
+              variant="text"
+              onClick={() => scrollToTop()}
+            >
               Voltar ao início
             </DefaultButton>
           </div>

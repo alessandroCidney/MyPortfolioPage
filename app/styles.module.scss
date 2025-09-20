@@ -12,6 +12,18 @@ header.defaultHeader {
 
   position: relative;
 
+  &.fixedHeader {
+    position: sticky;
+    top: 0;
+
+    z-index: 3;
+
+    backdrop-filter: blur(10px);
+    background-color: rgb(1, 1, 40, .1);
+
+    animation: showFixedHeader .2s linear;
+  }
+
   nav.defaultNav {
     height: 100%;
 
@@ -471,5 +483,15 @@ footer.defaultFooter {
         }
       }
     }
+  }
+}
+
+@keyframes showFixedHeader {
+  0% {
+    transform: translateY(-80px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
