@@ -1,21 +1,18 @@
 'use client'
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
-
-import styles from './styles.module.scss'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 import { InfiniteCarousel } from "./components/InfiniteCarousel"
 import { DefaultButton } from "./components/DefaultButton";
 import { ExperienceCard } from "./components/ExperienceCard";
+import { DefaultHeader } from './components/DefaultHeader';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
+import { scrollToTop } from "./utils/scroll";
+
+import styles from './styles.module.scss'
 
 export default function Home() {
-  const [fixedHeader, setFixedHeader] = useState(false)
-
   console.log('render')
 
   const experienceCardsData = [
@@ -96,105 +93,10 @@ export default function Home() {
       ],
     }
   ]
-  
-  function debounce (callback: () => void, wait: number) {
-    let timeoutId: number
-
-    return () => {
-      window.clearTimeout(timeoutId)
-
-      timeoutId = window.setTimeout(() => {
-        callback()
-      }, wait)
-    };
-  }
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-  }
-
-  function getScrollPercent() {
-    // https://stackoverflow.com/questions/2387136/cross-browser-method-to-determine-vertical-scroll-percentage-in-javascript
-
-    const currentScroll = document.documentElement.scrollTop || document.body.scrollTop
-    const totalScroll = (document.documentElement.scrollHeight || document.body.scrollHeight) - document.documentElement.clientHeight
-
-    return Math.floor(currentScroll / totalScroll * 100);
-  }
-
-  function checkScroll() {
-    console.log('checkScroll')
-
-    setFixedHeader(getScrollPercent() > 15)
-  }
-
-  const debouncedCheckScroll = debounce(checkScroll, 50)
-
-  useEffect(() => {
-    console.log('start render')
-    window.addEventListener('scroll', debouncedCheckScroll)
-
-    return () => {
-      console.log('end render')
-      window.removeEventListener('scroll', debouncedCheckScroll)
-    }
-  }, [checkScroll])
 
   return (
     <div>
-      <header
-        className={[
-          styles.defaultHeader,
-          fixedHeader ? styles.fixedHeader : ''
-        ].join(' ')}
-      >
-        <Link href='#'>
-          <Image
-            src='/images/texts/ac.png'
-            alt='Meu nome'
-            width={61}
-            height={40}
-            onClick={scrollToTop}
-          />
-        </Link>
-
-        <nav className={styles.defaultNav}>
-          <ul>
-            <li>
-              <Link href='#'>
-                <span>Início</span>
-              </Link>
-            </li>
-
-            <li>
-              <Link href='#about'>
-                <span>Sobre mim</span>
-              </Link>
-            </li>
-
-            <li>
-              <Link href='#experience'>
-                <span>Experiência</span>
-              </Link>
-            </li>
-
-            <li>
-              <Link href='#contact'>
-                <span>Contato</span>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-
-        <DefaultButton
-          appendIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
-          href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
-          target='_blank'
-          link
-        >
-          Falar
-        </DefaultButton>
-      </header>
+      <DefaultHeader />
 
       <main className={styles.defaultMain}>
         <section className={styles.firstSection}>
