@@ -46,21 +46,11 @@ header.defaultHeader {
 
       li {
         width: 25%;
-        padding: 10px;
+        height: 100%;
 
         text-align: center;
 
-        // border-radius: 9999px;
-
         transition: .1s ease-in-out all;
-
-        &:hover {
-          border-bottom: 3px solid #FFF;
-          // background-color: #FFF;
-          // color: #000;
-
-          // font-weight: bold;
-        }
 
         a {
           width: 100%;
@@ -71,6 +61,16 @@ header.defaultHeader {
           justify-content: center;
 
           cursor: pointer;
+
+          color: #fff;
+          text-decoration: none;
+
+          &:hover {
+            span {
+              padding: 10px;
+              border-bottom: 3px solid #FFF;
+            }
+          }
         }
       }
     }

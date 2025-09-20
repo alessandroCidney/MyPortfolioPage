@@ -11,6 +11,7 @@ import { ExperienceCard } from "./components/ExperienceCard";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function Home() {
   const [fixedHeader, setFixedHeader] = useState(false)
@@ -147,37 +148,40 @@ export default function Home() {
           fixedHeader ? styles.fixedHeader : ''
         ].join(' ')}
       >
-        <Image
-          src='/images/texts/ac.png'
-          alt='Meu nome'
-          width={61}
-          height={40}
-        />
+        <Link href='#'>
+          <Image
+            src='/images/texts/ac.png'
+            alt='Meu nome'
+            width={61}
+            height={40}
+            onClick={scrollToTop}
+          />
+        </Link>
 
         <nav className={styles.defaultNav}>
           <ul>
             <li>
-              <a>
-                Início
-              </a>
+              <Link href='#'>
+                <span>Início</span>
+              </Link>
             </li>
 
             <li>
-              <a>
-                Sobre mim
-              </a>
+              <Link href='#about'>
+                <span>Sobre mim</span>
+              </Link>
             </li>
 
             <li>
-              <a>
-                Experiência
-              </a>
+              <Link href='#experience'>
+                <span>Experiência</span>
+              </Link>
             </li>
 
             <li>
-              <a>
-                Contato
-              </a>
+              <Link href='#contact'>
+                <span>Contato</span>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -257,7 +261,10 @@ export default function Home() {
           <div className={styles.personArmsCrossed} />
         </section>
 
-        <section className={styles.thirdSection}>
+        <section
+          id='about'
+          className={styles.thirdSection}
+        >
           <div className={styles.contentContainer}>
             <div className={styles.textContainer}>
               <h2>
@@ -300,7 +307,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.fourthSection}>
+        <section
+          id='experience'
+          className={styles.fourthSection}
+        >
           <div className={styles.contentContainer}>
             <div className={styles.titleContainer}>
               <h2>
@@ -356,7 +366,10 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className={styles.defaultFooter}>
+      <footer
+        id='contact'
+        className={styles.defaultFooter}
+      >
         <div className={styles.footerTitleArea}>
           <h2>
             Vamos trabalhar<br />juntos?
