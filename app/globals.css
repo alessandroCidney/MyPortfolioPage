@@ -27,8 +27,8 @@ body {
 
 :root {
   --theme-primary-color: #0509DE;
-  --theme-background-color: #010128;
-  --theme-background-lighten-color: #02023C;
+  --theme-primary-darken-1-color: #000045;
+  --theme-primary-darken-2-color: #010128;
 
   --header-height: 70px;
 }
@@ -45,7 +45,7 @@ body {
 }
 
 body {
-  background-color: var(--theme-background-color);
+  background-color: var(--theme-primary-darken-2-color);
   color: #fff;
 }
 

@@ -1,0 +1,82 @@
+section.aboutSection {
+  position: relative;
+
+  margin: auto;
+
+  width: 95%;
+  max-width: 1500px;
+
+  border-radius: 50px;
+
+  // Prevents CSS margin collapsing "errors"
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
+  border: 1px solid transparent;
+  
+  .contentContainer {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 20px;
+    margin: 50px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: var(--theme-primary-color);
+
+    border-radius: 50px;
+
+    .textContainer {
+      width: 50%;
+
+      > * {
+        margin: auto;
+
+        width: 70%;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+
+        font-size: 5rem;
+
+        span.highlight {
+          color: var(--theme-primary-darken-1-color);
+        }
+      }
+
+      p {
+        margin-bottom: 10px;
+
+        opacity: 0.8;
+      }
+    }
+
+    .imageContainer {
+      position: relative;
+
+      aspect-ratio: 658 / 772;
+
+      width: 50%;
+    }
+  }
+
+  .secondBackground {
+    position: absolute;
+
+    z-index: 1;
+
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    height: 100%;
+
+    background-color: var(--theme-primary-darken-1-color);
+
+    border-radius: 50px;
+  }
+}

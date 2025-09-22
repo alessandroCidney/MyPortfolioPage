@@ -1,5 +1,3 @@
-'use client'
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,6 +8,7 @@ import styles from './styles.module.scss'
 
 import { HeroSection } from "./components/pages/HeroSection";
 import { GeneralSkillsSection } from "./components/pages/GeneralSkillsSection";
+import { AboutSection } from "./components/pages/AboutSection";
 
 export default function Home() {
   return (
@@ -20,6 +19,8 @@ export default function Home() {
         <HeroSection />
 
         <GeneralSkillsSection />
+
+        <AboutSection />
       </main>
     </div>
   );
