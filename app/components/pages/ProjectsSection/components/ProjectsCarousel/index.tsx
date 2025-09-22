@@ -1,9 +1,19 @@
 import { ProjectCard } from './components/ProjectCard'
 import styles from './styles.module.scss'
 
-export function ProjectsCarousel() {
+interface ProjectCardProps {
+  reversed?: boolean
+}
+
+export function ProjectsCarousel(props: ProjectCardProps) {
+  const projectCardClassNames = [styles.projectsCarouselContainer]
+
+  if (props.reversed) {
+    projectCardClassNames.push(styles.reversed)
+  }
+
   return (
-    <div className={styles.projectsCarouselContainer}>
+    <div className={projectCardClassNames.join(' ')}>
       <div className={styles.projectsCarousel}>
         <ProjectCard />
 

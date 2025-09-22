@@ -4,19 +4,29 @@
 
   width: 90%;
   max-width: 1200px;
+  
+  .contentContainer {
+    margin-bottom: 100px;
 
-  .titleContainer {
-    h2 {
-      font-size: 4rem;
+    .titleContainer {
+      h2 {
+        font-size: 4rem;
+      }
+
+      p {
+        margin-bottom: 50px;
+
+        font-weight: bold;
+        font-size: 2rem;
+
+        color: rgba(#FFFFFF, .2);
+      }
     }
 
-    p {
-      margin-bottom: 50px;
-
-      font-weight: bold;
-      font-size: 2rem;
-
-      color: rgba(#FFFFFF, .2);
+    &.reversed {
+      .titleContainer {
+        text-align: right;
+      }
     }
   }
 }
@@ -25,10 +35,12 @@
   .projectsSection {
     width: 100%;
 
-    .titleContainer {
-      margin: auto;
+    .contentContainer {
+      .titleContainer {
+        margin: auto;
 
-      width: 90%;
+        width: 90%;
+      }
     }
   }
 }
