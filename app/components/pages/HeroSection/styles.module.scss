@@ -1,0 +1,96 @@
+.heroSection {
+  background-image: url('/images/backgrounds/blue-code-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  height: calc(98vh - var(--header-height));
+  max-height: 1200px;
+
+  .textContainer {
+    position: relative;
+
+    margin: auto auto 50px auto;
+    padding-top: 70px;
+
+    width: 90%;
+    max-width: 2000px;
+
+    .developerImageContainer {
+      position: relative;
+
+      z-index: 1;
+
+      width: 100%;
+
+      aspect-ratio: 1754 / 389;
+    }
+
+    p {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 480px;
+    }
+  }
+
+  .personImageContainer {
+    position: absolute;
+
+    z-index: 1;
+
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 80%;
+
+    aspect-ratio: 1372 / 1024;
+  }
+}
+
+@media(min-width: 961px) {
+  .heroSection {
+    border-radius: 50px;
+    
+    overflow: hidden;
+
+    .textContainer {
+      p {
+        transform: translateY(-30px);
+      }
+    }
+  }
+}
+
+@media(max-width: 960px) {
+  .heroSection {
+    height: auto;
+
+    .textContainer {
+      padding-top: 120px;
+
+      max-width: 700px;
+
+      text-align: center;
+      
+      p {
+        margin: auto;
+      }
+    }
+
+    .personImageContainer {
+      position: relative;
+
+      bottom: auto;
+      left: auto;
+      transform: none;
+      margin: auto;
+
+      width: 400px;
+      max-width: 100%;
+    }
+  }
+}

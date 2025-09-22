@@ -1,0 +1,49 @@
+.skillCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 10px;
+
+  padding: 20px 20px 80px 20px;
+  
+  aspect-ratio: 1;
+
+  border-radius: 50px;
+
+  background-color: #000045;
+
+  header {
+    width: 100%;
+
+    .skillIcon {
+      position: relative;
+
+      display: inline-block;
+
+      width: 60px;
+      aspect-ratio: 1;
+
+      border-radius: 50%;
+
+      background-color: #000099;
+
+      svg {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    h1 {
+      font-weight: 500;
+    }
+  }
+
+  p {
+    opacity: 0.6;
+  }
+}

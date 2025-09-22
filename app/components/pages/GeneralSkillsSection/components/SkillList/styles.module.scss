@@ -1,0 +1,12 @@
+.skillList {
+  display: grid;
+
+  width: 90%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  gap: 30px;
+
+  grid-template-columns: 1fr 1fr 1fr;
+}

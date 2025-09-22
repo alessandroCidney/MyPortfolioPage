@@ -8,7 +8,7 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { getScrollPercent, scrollToTop } from "@/app/utils/scroll";
 import { debounce } from "@/app/utils";
 
-import { DefaultButton } from "../DefaultButton";
+import { DefaultButton } from "../../commons/DefaultButton";
 
 import styles from './styles.module.scss'
 

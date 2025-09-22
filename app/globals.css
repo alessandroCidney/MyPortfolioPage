@@ -29,6 +29,8 @@ body {
   --theme-primary-color: #0509DE;
   --theme-background-color: #010128;
   --theme-background-lighten-color: #02023C;
+
+  --header-height: 70px;
 }
 
 * {
@@ -43,11 +45,12 @@ body {
 }
 
 body {
-  background-color: #010128;
+  background-color: var(--theme-background-color);
+  color: #fff;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  letter-spacing: -0.05em;
+* {
+  letter-spacing: -0.03em;
 }
 
 p {
