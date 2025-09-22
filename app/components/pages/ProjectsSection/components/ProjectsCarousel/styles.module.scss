@@ -1,0 +1,23 @@
+.projectsCarouselContainer {
+  padding-bottom: 20px;
+  
+  width: 100%;
+
+  overflow-x: auto;
+
+  .projectsCarousel {
+    display: flex;
+
+    gap: 30px;
+
+    height: 600px;
+  }
+}
+
+@media(max-width: 960px) {
+  .projectsCarouselContainer {
+    .projectsCarousel {
+      padding-left: 5%;
+    }
+  }
+}

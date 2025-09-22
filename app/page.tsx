@@ -9,6 +9,7 @@ import styles from './styles.module.scss'
 import { HeroSection } from "./components/pages/HeroSection";
 import { GeneralSkillsSection } from "./components/pages/GeneralSkillsSection";
 import { AboutSection } from "./components/pages/AboutSection";
+import { ProjectsSection } from "./components/pages/ProjectsSection";
 
 export default function Home() {
   return (
@@ -21,6 +22,8 @@ export default function Home() {
         <GeneralSkillsSection />
 
         <AboutSection />
+
+        <ProjectsSection />
       </main>
     </div>
   );

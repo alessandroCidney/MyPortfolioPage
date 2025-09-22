@@ -1,0 +1,34 @@
+.projectsSection {
+  padding: 90px 0;
+  margin: auto;
+
+  width: 90%;
+  max-width: 1200px;
+
+  .titleContainer {
+    h2 {
+      font-size: 4rem;
+    }
+
+    p {
+      margin-bottom: 50px;
+
+      font-weight: bold;
+      font-size: 2rem;
+
+      color: rgba(#FFFFFF, .2);
+    }
+  }
+}
+
+@media(max-width: 960px) {
+  .projectsSection {
+    width: 100%;
+
+    .titleContainer {
+      margin: auto;
+
+      width: 90%;
+    }
+  }
+}

@@ -6,13 +6,13 @@ export function AboutSection() {
     <section className={styles.aboutSection}>
       <div className={styles.contentContainer}>
         <div className={styles.textContainer}>
-          <h1>
+          <h2>
             Sobre <br />
 
             <span className={styles.highlight}>
               mim.
             </span>
-          </h1>
+          </h2>
 
           <p>
             Lorem inpsum dolor sir amet Lorem inpsum dolor sir amet Lorem inpsum dolor sir amet Lorem inpsum dolor sir amet Lorem inpsum dolor sir amet Lorem inpsum dolor sir amet Lorem inpsum dolor sir amet Lorem inpsum dolor sir amet.

@@ -12,9 +12,9 @@ export function SkillCard() {
           <FontAwesomeIcon icon={faFigma} size='2x' />
         </div>
 
-        <h1>
+        <h3>
           Lorem ipsum
-        </h1>
+        </h3>
       </header>
 
       <p>

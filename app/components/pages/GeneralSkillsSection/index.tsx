@@ -6,7 +6,7 @@ export function GeneralSkillsSection() {
   return (
     <section className={styles.generalSkillsSection}>
       <header>
-        <h1>
+        <h2>
           <span>
             O <span className={styles.highlight}>desenvolvedor web</span>
           </span>
@@ -14,7 +14,7 @@ export function GeneralSkillsSection() {
           <br />
 
           <span>que você estava procurando.</span>
-        </h1>
+        </h2>
       </header>
 
       <SkillList />

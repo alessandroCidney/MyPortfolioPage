@@ -1,0 +1,46 @@
+.projectCard {
+  display: inline-block;
+
+  width: 400px;
+
+  aspect-ratio: 2 / 3;
+
+  border-radius: 50px;
+
+  background-color: var(--theme-primary-darken-1-color);
+
+  header {
+    .imageContainer {
+      width: 100%;
+
+      aspect-ratio: 1;
+
+      border-radius: 50px;
+
+      background: linear-gradient(#050586, #0909EC);
+    }
+
+    h3 {
+      padding: 20px 20px 10px 20px;
+
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    padding: 0 20px;
+
+    font-size: 1rem;
+
+    color: rgba(#FFF, .6);
+  }
+}
+
+@media(max-width: 960px) {
+  .projectCard {
+    width: 380px;
+
+    aspect-ratio: 3 / 4;
+  }
+}
