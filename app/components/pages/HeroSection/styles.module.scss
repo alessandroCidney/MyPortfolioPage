@@ -67,7 +67,7 @@
 
 @media(max-width: 960px) {
   .heroSection {
-    height: auto;
+    height: 90dvh;
 
     .textContainer {
       padding-top: 120px;
@@ -82,15 +82,17 @@
     }
 
     .personImageContainer {
-      position: relative;
+      // position: relative;
 
-      bottom: auto;
-      left: auto;
-      transform: none;
-      margin: auto;
+      // bottom: auto;
+      // left: auto;
+      // transform: none;
+      // margin: auto;
 
-      width: 400px;
+      width: 600px;
       max-width: 100%;
+
+      height: auto;
     }
   }
 }

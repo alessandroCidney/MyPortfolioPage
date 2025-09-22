@@ -15,12 +15,12 @@ import { DefaultButton } from "../../commons/DefaultButton";
 import styles from './styles.module.scss'
 
 export function DefaultHeader() {
-  const [fixedHeader, setFixedHeader] = useState(false)
+  const [userScrolledDown, setUserScrolledDown] = useState(false)
 
   function checkScroll() {
     console.log('checkScroll')
 
-    setFixedHeader(getScrollPercent() > 15)
+    setUserScrolledDown(getScrollPercent() > 15)
   }
 
   const debouncedCheckScroll = debounce(checkScroll, 50)
@@ -38,7 +38,7 @@ export function DefaultHeader() {
     <header
       className={[
         styles.defaultHeader,
-        fixedHeader ? styles.fixedHeader : ''
+        userScrolledDown ? styles.userScrolledDown : ''
       ].join(' ')}
     >
       <Link href='#'>

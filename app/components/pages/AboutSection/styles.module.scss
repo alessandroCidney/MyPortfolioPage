@@ -80,3 +80,31 @@ section.aboutSection {
     border-radius: 50px;
   }
 }
+
+@media (max-width: 1260px) {
+  section.aboutSection {
+    .contentContainer {
+      align-items: flex-start;
+      flex-direction: column;
+
+      padding: 80px 40px;
+
+      .textContainer {
+        width: 100%;
+
+        > * {
+          width: 100%;
+        }
+
+        p:last-of-type {
+          margin-bottom: 40px;
+        }
+      }
+
+      .imageContainer {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
+}

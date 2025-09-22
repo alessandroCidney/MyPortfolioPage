@@ -47,3 +47,11 @@
     opacity: 0.6;
   }
 }
+
+@media(max-width: 960px) {
+  .skillCard {
+    max-width: 400px;
+
+    justify-self: center;
+  }
+}

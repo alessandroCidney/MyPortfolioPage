@@ -76,18 +76,22 @@ header.defaultHeader {
 
 @media (min-width: 960px) {
   header.defaultHeader {
-    &.fixedHeader {
+    &.userScrolledDown {
       position: sticky;
 
       top: 0;
 
       z-index: 3;
 
-      backdrop-filter: blur(10px);
-      background-color: rgb(1, 1, 40, .1);
+      animation: headerAnimationStart .2s linear forwards;
+    }
+
+    &:not(.userScrolledDown) {
+      animation: headerAnimationEnd .2s linear forwards;
     }
   }
 }
+
 @media(max-width: 960px) {
   header.defaultHeader {
     position: fixed;
@@ -96,5 +100,33 @@ header.defaultHeader {
     padding: 0 5%;
 
     z-index: 4;
+
+    &.userScrolledDown {
+      animation: headerAnimationStart .2s linear forwards;
+    }
+
+    &:not(.userScrolledDown) {
+      animation: headerAnimationEnd .2s linear forwards;
+    }
+  }
+}
+
+@keyframes headerAnimationStart {
+  0% {
+    backdrop-filter: none;
+  }
+
+  100% {
+    backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes headerAnimationEnd {
+  0% {
+    backdrop-filter: blur(10px);
+  }
+
+  100% {
+    backdrop-filter: none;
   }
 }
