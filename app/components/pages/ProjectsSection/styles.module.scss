@@ -6,7 +6,9 @@
   max-width: 1200px;
   
   .contentContainer {
-    margin-bottom: 100px;
+    &:first-of-type {
+      margin-bottom: 100px;
+    }
 
     .titleContainer {
       h2 {

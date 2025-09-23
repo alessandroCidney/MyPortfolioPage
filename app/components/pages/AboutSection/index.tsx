@@ -10,7 +10,7 @@ export function AboutSection() {
             Sobre <br />
 
             <span className={styles.highlight}>
-              mim.
+              mim
             </span>
           </h2>
 

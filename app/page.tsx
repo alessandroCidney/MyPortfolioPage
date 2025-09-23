@@ -10,6 +10,8 @@ import { HeroSection } from "./components/pages/HeroSection";
 import { GeneralSkillsSection } from "./components/pages/GeneralSkillsSection";
 import { AboutSection } from "./components/pages/AboutSection";
 import { ProjectsSection } from "./components/pages/ProjectsSection";
+import { ExperienceSection } from "./components/pages/ExperienceSection";
+import { HardSkillsSection } from "./components/pages/HardSkillsSection";
 
 export default function Home() {
   return (
@@ -24,6 +26,10 @@ export default function Home() {
         <AboutSection />
 
         <ProjectsSection />
+
+        <ExperienceSection />
+
+        <HardSkillsSection />
       </main>
     </div>
   );
