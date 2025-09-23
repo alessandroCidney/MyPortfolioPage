@@ -113,20 +113,28 @@ header.defaultHeader {
 
 @keyframes headerAnimationStart {
   0% {
+    opacity: 0;
     backdrop-filter: none;
   }
 
   100% {
+    opacity: 1;
     backdrop-filter: blur(10px);
   }
 }
 
 @keyframes headerAnimationEnd {
   0% {
+    opacity: 1;
     backdrop-filter: blur(10px);
   }
 
-  100% {
+  99% {
+    opacity: 0;
     backdrop-filter: none;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

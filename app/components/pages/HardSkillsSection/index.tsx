@@ -9,18 +9,18 @@ export function HardSkillsSection() {
     { title: 'React.js', icon: '/images/logos/react-logo.svg' },
     { title: 'Next.js', icon: '/images/logos/next-js-logo.svg' },
     { title: 'Vue.js', icon: '/images/logos/vue-logo.svg' },
-    { title: 'Nuxt.js', icon: '/images/logos/react-logo.svg' },
-    { title: 'Vuetify', icon: '/images/logos/react-logo.svg' },
+    { title: 'Nuxt.js', icon: '/images/logos/nuxt-logo.svg' },
+    { title: 'Vuetify', icon: '/images/logos/vuetify-logo.png' },
 
-    { title: 'HTML5', icon: '/images/logos/react-logo.svg' },
-    { title: 'CSS3', icon: '/images/logos/react-logo.svg' },
-    { title: 'Sass / Scss', icon: '/images/logos/react-logo.svg' },
+    { title: 'HTML5', icon: '/images/logos/html-logo.svg' },
+    { title: 'CSS3', icon: '/images/logos/css-logo.svg' },
+    { title: 'Sass / Scss', icon: '/images/logos/sass-logo.svg' },
 
-    { title: 'Node.js', icon: '/images/logos/react-logo.svg' },
-    { title: 'MongoDB', icon: '/images/logos/react-logo.svg' },
-    { title: 'MySQL', icon: '/images/logos/react-logo.svg' },
-    { title: 'Express', icon: '/images/logos/react-logo.svg' },
-    { title: 'Docker', icon: '/images/logos/react-logo.svg' },
+    { title: 'Node.js', icon: '/images/logos/node-logo.svg' },
+    { title: 'MongoDB', icon: '/images/logos/mongo-db-logo.svg' },
+    { title: 'MySQL', icon: '/images/logos/mysql-logo.svg' },
+    { title: 'Express', icon: '/images/logos/express-logo.svg' },
+    { title: 'Docker', icon: '/images/logos/docker-logo.svg' },
     { title: 'Webpack', icon: '/images/logos/react-logo.svg' },
 
     { title: 'Firebase', icon: '/images/logos/react-logo.svg' },
@@ -60,8 +60,8 @@ export function HardSkillsSection() {
               <Image
                 src={itemData.icon}
                 alt=''
-                width={48}
-                height={48}
+                width={64}
+                height={64}
               />
 
               <h3>
