@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-import { getScrollPercent, scrollToTop } from "@/app/utils/scroll";
+import { getScrollPosition, scrollToTop } from "@/app/utils/scroll";
 import { debounce } from "@/app/utils";
 
 import { DefaultButton } from "../../commons/DefaultButton";
@@ -18,19 +18,15 @@ export function DefaultHeader() {
   const [userScrolledDown, setUserScrolledDown] = useState(false)
 
   function checkScroll() {
-    console.log('checkScroll')
-
-    setUserScrolledDown(getScrollPercent() > 15)
+    setUserScrolledDown(getScrollPosition() > 20)
   }
 
   const debouncedCheckScroll = debounce(checkScroll, 50)
 
   useEffect(() => {
-    console.log('start render')
     window.addEventListener('scroll', debouncedCheckScroll)
 
     return () => {
-      console.log('end render')
       window.removeEventListener('scroll', debouncedCheckScroll)
     }
   }, [checkScroll])

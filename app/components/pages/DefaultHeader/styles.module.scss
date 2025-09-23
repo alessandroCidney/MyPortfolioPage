@@ -1,8 +1,11 @@
 header.defaultHeader {
-  position: relative;
+  position: sticky;
+
+  top: 0;
+
+  z-index: 4;
 
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 
@@ -12,6 +15,10 @@ header.defaultHeader {
   height: var(--header-height);
 
   color: #FFF;
+
+  &.userScrolledDown {
+    animation: headerAnimationStart .2s linear forwards;
+  }
 
   nav.defaultNav {
     height: 100%;
@@ -74,67 +81,21 @@ header.defaultHeader {
   }
 }
 
-@media (min-width: 960px) {
-  header.defaultHeader {
-    &.userScrolledDown {
-      position: sticky;
-
-      top: 0;
-
-      z-index: 3;
-
-      animation: headerAnimationStart .2s linear forwards;
-    }
-
-    &:not(.userScrolledDown) {
-      animation: headerAnimationEnd .2s linear forwards;
-    }
-  }
-}
-
 @media(max-width: 960px) {
   header.defaultHeader {
     position: fixed;
 
     top: 0;
     padding: 0 5%;
-
-    z-index: 4;
-
-    &.userScrolledDown {
-      animation: headerAnimationStart .2s linear forwards;
-    }
-
-    &:not(.userScrolledDown) {
-      animation: headerAnimationEnd .2s linear forwards;
-    }
   }
 }
 
 @keyframes headerAnimationStart {
   0% {
-    opacity: 0;
     backdrop-filter: none;
   }
 
   100% {
-    opacity: 1;
-    backdrop-filter: blur(10px);
-  }
-}
-
-@keyframes headerAnimationEnd {
-  0% {
-    opacity: 1;
-    backdrop-filter: blur(10px);
-  }
-
-  99% {
-    opacity: 0;
-    backdrop-filter: none;
-  }
-
-  100% {
-    opacity: 1;
+    backdrop-filter: blur(7px);
   }
 }
