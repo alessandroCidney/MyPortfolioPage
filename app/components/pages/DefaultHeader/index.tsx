@@ -85,7 +85,7 @@ export function DefaultHeader() {
         target='_blank'
         link
       >
-        Falar
+        Contratar
       </DefaultButton>
     </header>
   )

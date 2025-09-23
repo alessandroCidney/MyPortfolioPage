@@ -1,45 +1,46 @@
+import Image from 'next/image'
 import styles from './styles.module.scss'
 
 export function HardSkillsSection() {
   const skillsList = [
-    'JavaScript',
-    'TypeScript',
+    { title: 'JavaScript', icon: '/images/logos/js-logo.svg' },
+    { title: 'TypeScript', icon: '/images/logos/ts-logo.svg' },
 
-    'React.js',
-    'Next.js',
-    'Vue.js',
-    'Nuxt.js',
-    'Vuetify',
+    { title: 'React.js', icon: '/images/logos/react-logo.svg' },
+    { title: 'Next.js', icon: '/images/logos/next-js-logo.svg' },
+    { title: 'Vue.js', icon: '/images/logos/vue-logo.svg' },
+    { title: 'Nuxt.js', icon: '/images/logos/react-logo.svg' },
+    { title: 'Vuetify', icon: '/images/logos/react-logo.svg' },
 
-    'HTML5',
-    'CSS3',
-    'Sass / Scss',
+    { title: 'HTML5', icon: '/images/logos/react-logo.svg' },
+    { title: 'CSS3', icon: '/images/logos/react-logo.svg' },
+    { title: 'Sass / Scss', icon: '/images/logos/react-logo.svg' },
 
-    'Node.js',
-    'MongoDB',
-    'MySQL',
-    'Express',
-    'Docker',
-    'Webpack',
+    { title: 'Node.js', icon: '/images/logos/react-logo.svg' },
+    { title: 'MongoDB', icon: '/images/logos/react-logo.svg' },
+    { title: 'MySQL', icon: '/images/logos/react-logo.svg' },
+    { title: 'Express', icon: '/images/logos/react-logo.svg' },
+    { title: 'Docker', icon: '/images/logos/react-logo.svg' },
+    { title: 'Webpack', icon: '/images/logos/react-logo.svg' },
 
-    'Firebase',
-    'Google Cloud',
+    { title: 'Firebase', icon: '/images/logos/react-logo.svg' },
+    { title: 'Google Cloud', icon: '/images/logos/react-logo.svg' },
 
-    'WebSocket',
+    { title: 'WebSocket', icon: '/images/logos/react-logo.svg' },
 
-    'Jest',
-    'Cypress',
-    'Selenium',
-    'Vitest',
+    { title: 'Jest', icon: '/images/logos/react-logo.svg' },
+    { title: 'Cypress', icon: '/images/logos/react-logo.svg' },
+    { title: 'Selenium', icon: '/images/logos/react-logo.svg' },
+    { title: 'Vitest', icon: '/images/logos/react-logo.svg' },
 
-    'Git',
-    'Github',
-    'Bitbucket',
+    { title: 'Git', icon: '/images/logos/react-logo.svg' },
+    { title: 'Github', icon: '/images/logos/react-logo.svg' },
+    { title: 'Bitbucket', icon: '/images/logos/react-logo.svg' },
 
-    'Figma',
-    'Scrum',
-    'Kanban',
-    'Jira',
+    { title: 'Figma', icon: '/images/logos/react-logo.svg' },
+    { title: 'Scrum', icon: '/images/logos/react-logo.svg' },
+    { title: 'Kanban', icon: '/images/logos/react-logo.svg' },
+    { title: 'Jira', icon: '/images/logos/react-logo.svg' },
   ]
 
   return (
@@ -49,15 +50,22 @@ export function HardSkillsSection() {
       </h2>
 
       <p>
-        Precisando de alguma habilidade específica? Veja minhas skills.
+        Precisando de uma habilidade específica? <br /> Veja algumas de minhas skills.
       </p>
 
       <div className={styles.skillsGrid}>
-        { skillsList.map((item, itemIndex) => (
+        { skillsList.map((itemData, itemIndex) => (
           <article key={`itemIndex${itemIndex}`}>
             <header>
+              <Image
+                src={itemData.icon}
+                alt=''
+                width={48}
+                height={48}
+              />
+
               <h3>
-                { item }
+                { itemData.title }
               </h3>
             </header>
           </article>

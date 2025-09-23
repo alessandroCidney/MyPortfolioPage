@@ -1,5 +1,5 @@
 .defaultButton {
-  min-width: 120px;
+  min-width: 170px;
   display: inline-block;
 
   text-align: center;
@@ -8,7 +8,7 @@
 
   cursor: pointer;
 
-  font-weight: bold;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 1rem;
 
@@ -18,58 +18,47 @@
 
   text-decoration: none;
 
-  &.text {
-    background-color: transparent;
-    color: #FFF;
-
-    border: 3px solid transparent;
-
-    &:hover {
-      outline: 4px solid #FFF;
-      border: 3px solid #212121;
-      background-color: #FFF;
-      color: #000;
-    }
-  }
-
   &.outlined {
-    outline: 4px solid transparent;
     border: 2px solid #FFF;
 
     background-color: transparent;
     color: #FFF;
 
     &:hover {
-      outline: 4px solid #FFF;
-      border: 2px solid #212121;
+      font-weight: bold;
+
       background-color: #FFF;
       color: #000;
     }
   }
 
   &.flat {
-    border: 0;
+    border: 2px solid var(--theme-primary-darken-1-color);
 
-    background-color: #FFF;
-    color: #000;
-
-    border: 3px solid #FFF;
+    background-color: var(--theme-primary-darken-1-color);
+    color: #FFF;
 
     &:hover {
-      outline: 4px solid #FFF;
-      border: 3px solid #000;
+      font-weight: bold;
+
+      background-color: #FFF;
+      color: #000;
+
+      border: 2px solid #FFF;
     }
+  }
 
-    &.primary {
-      background-color: var(--theme-primary-color);
-      color: #fff;
+  &.blur {
+    background-color: rgba(255, 255, 255, .1);
+    color: #FFF;
 
-      border: 3px solid var(--theme-primary-color);
+    backdrop-filter: blur(5px);
 
-      &:hover {
-        outline: 4px solid var(--theme-primary-color);
-        border: 3px solid #000;
-      }
+    &:hover {
+      font-weight: bold;
+
+      background-color: #FFF;
+      color: #000;
     }
   }
 

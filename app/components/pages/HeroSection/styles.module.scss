@@ -34,6 +34,12 @@
 
       max-width: 480px;
     }
+
+    button, a {
+      position: relative;
+
+      z-index: 2;
+    }
   }
 
   .personImageContainer {
@@ -82,13 +88,6 @@
     }
 
     .personImageContainer {
-      // position: relative;
-
-      // bottom: auto;
-      // left: auto;
-      // transform: none;
-      // margin: auto;
-
       width: 600px;
       max-width: 100%;
 

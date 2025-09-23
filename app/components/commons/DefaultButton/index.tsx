@@ -6,10 +6,9 @@ interface BaseProps {
   children: ReactNode
   appendIcon?: ReactNode
   
-  variant?: 'outlined' | 'flat' | 'text'
+  variant?: 'outlined' | 'flat' | 'blur'
 
   large?: boolean
-  primary?: boolean
 }
 
 type ActionButtonProps = BaseProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -38,7 +37,6 @@ export function DefaultButton({
   variant,
 
   large,
-  primary,
   link,
 
   ...rest
@@ -47,10 +45,6 @@ export function DefaultButton({
 
   if (large) {
     classNameArr.push(styles.large)
-  }
-
-  if (primary) {
-    classNameArr.push(styles.primary)
   }
 
   const nodeItems = { children, appendIcon }
