@@ -21,26 +21,27 @@ export function HardSkillsSection() {
     { title: 'MySQL', icon: '/images/logos/mysql-logo.svg' },
     { title: 'Express', icon: '/images/logos/express-logo.svg' },
     { title: 'Docker', icon: '/images/logos/docker-logo.svg' },
-    { title: 'Webpack', icon: '/images/logos/react-logo.svg' },
+    { title: 'Webpack', icon: '/images/logos/webpack-logo.svg' },
 
-    { title: 'Firebase', icon: '/images/logos/react-logo.svg' },
-    { title: 'Google Cloud', icon: '/images/logos/react-logo.svg' },
+    { title: 'Firebase', icon: '/images/logos/firebase-logo.svg' },
+    { title: 'Google Cloud', icon: '/images/logos/gcp-logo.svg' },
 
-    { title: 'WebSocket', icon: '/images/logos/react-logo.svg' },
+    { title: 'REST', icon: '/images/logos/rest-logo.svg' },
+    { title: 'WebSocket', icon: '/images/logos/websocket-logo.svg' },
 
-    { title: 'Jest', icon: '/images/logos/react-logo.svg' },
-    { title: 'Cypress', icon: '/images/logos/react-logo.svg' },
-    { title: 'Selenium', icon: '/images/logos/react-logo.svg' },
-    { title: 'Vitest', icon: '/images/logos/react-logo.svg' },
+    { title: 'Jest', icon: '/images/logos/jest-logo.png' },
+    { title: 'Cypress', icon: '/images/logos/cypress-logo.png' },
+    { title: 'Selenium', icon: '/images/logos/selenium-logo.svg' },
+    { title: 'Vitest', icon: '/images/logos/vitest-logo.svg' },
 
-    { title: 'Git', icon: '/images/logos/react-logo.svg' },
-    { title: 'Github', icon: '/images/logos/react-logo.svg' },
-    { title: 'Bitbucket', icon: '/images/logos/react-logo.svg' },
+    { title: 'Git', icon: '/images/logos/git-logo.svg' },
+    { title: 'Github', icon: '/images/logos/github-logo.svg' },
+    { title: 'Bitbucket', icon: '/images/logos/bitbucket-logo.svg' },
+    { title: 'Jira', icon: '/images/logos/jira-logo.svg' },
 
-    { title: 'Figma', icon: '/images/logos/react-logo.svg' },
-    { title: 'Scrum', icon: '/images/logos/react-logo.svg' },
-    { title: 'Kanban', icon: '/images/logos/react-logo.svg' },
-    { title: 'Jira', icon: '/images/logos/react-logo.svg' },
+    { title: 'Figma', icon: '/images/logos/figma-logo.svg' },
+    { title: 'Scrum', icon: '/images/logos/scrum-logo.svg' },
+    { title: 'Kanban', icon: '/images/logos/kanban-logo.svg' },
   ]
 
   return (

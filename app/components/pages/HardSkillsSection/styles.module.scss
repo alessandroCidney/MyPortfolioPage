@@ -23,10 +23,9 @@
   }
 
   .skillsGrid {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-rows: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     // background-color: var(--theme-primary-darken-1-color);
 
@@ -37,8 +36,8 @@
     width: 100%;
 
     article {
-      justify-self: center;
-      align-self: center;
+      width: 20%;
+      height: 160px;
 
       header {
         text-align: center;
@@ -52,6 +51,26 @@
 
           color: rgba(#FFF, .7);
         }
+      }
+    }
+  }
+}
+
+@media(max-width: 1280px) {
+  .hardSkillsSection {
+    .skillsGrid {
+      article {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hardSkillsSection {
+    .skillsGrid {
+      article {
+        width: 50%;
       }
     }
   }

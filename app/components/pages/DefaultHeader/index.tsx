@@ -45,8 +45,8 @@ export function DefaultHeader() {
         <Image
           src='/images/texts/ac.png'
           alt='Meu nome'
-          width={61}
-          height={40}
+          width={55}
+          height={34}
           onClick={scrollToTop}
         />
       </Link>
