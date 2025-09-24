@@ -9,6 +9,7 @@ interface BaseProps {
   variant?: 'outlined' | 'flat' | 'blur'
 
   icon?: boolean
+  persistentIcon?: boolean
 }
 
 type ActionButtonProps = BaseProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -40,6 +41,7 @@ export function DefaultButton({
   variant,
 
   icon,
+  persistentIcon,
   link,
 
   style,
@@ -50,6 +52,10 @@ export function DefaultButton({
 
   if (icon) {
     classNameArr.push(styles.icon)
+  }
+
+  if (persistentIcon) {
+    classNameArr.push(styles.persistentIcon)
   }
 
   const nodeItems = { children, appendIcon }
