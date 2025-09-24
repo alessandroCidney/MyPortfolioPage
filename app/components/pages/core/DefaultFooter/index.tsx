@@ -14,7 +14,10 @@ import { scrollToTop } from '@/app/utils/scroll'
 
 export function DefaultFooter() {
   return (
-    <footer className={styles.defaultFooter}>
+    <footer
+      id='contact'
+      className={styles.defaultFooter}
+    >
       <div className={styles.letsWorkTogetherArea}>
         <h2>
           Vamos trabalhar <br/>

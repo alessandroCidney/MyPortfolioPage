@@ -3,7 +3,10 @@ import { ProjectsCarousel } from './components/ProjectsCarousel'
 
 export function ProjectsSection() {
   return (
-    <section className={styles.projectsSection}>
+    <section
+      id='projects'
+      className={styles.projectsSection}
+    >
       <div className={styles.contentContainer}>
         <div className={styles.titleContainer}>
           <h2>

@@ -7,7 +7,10 @@ import { DefaultButton } from '../../../commons/DefaultButton'
 
 export function ExperienceSection() {
   return (
-    <section className={styles.experienceSection}>
+    <section
+      id='experience'
+      className={styles.experienceSection}
+    >
       <div className={styles.contentContainer}>
         <h2>
           Experiência profissional

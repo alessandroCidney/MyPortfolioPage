@@ -62,8 +62,14 @@ export function DefaultHeader() {
           </li>
 
           <li>
-            <Link href='#experience'>
-              <span>Experiência</span>
+            <Link href='#projects'>
+              <span>Projetos</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link href='#skills'>
+              <span>Skills</span>
             </Link>
           </li>
 

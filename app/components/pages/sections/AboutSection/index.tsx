@@ -3,7 +3,10 @@ import styles from './styles.module.scss'
 
 export function AboutSection() {
   return (
-    <section className={styles.aboutSection}>
+    <section
+      id='about'
+      className={styles.aboutSection}
+    >
       <div className={styles.contentContainer}>
         <div className={styles.textContainer}>
           <h2>

@@ -45,7 +45,10 @@ export function HardSkillsSection() {
   ]
 
   return (
-    <section className={styles.hardSkillsSection}>
+    <section
+      id='skills'
+      className={styles.hardSkillsSection}
+    >
       <h2>
         Skills
       </h2>
