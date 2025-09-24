@@ -29,9 +29,13 @@ section.aboutSection {
     border-radius: 50px;
 
     .textContainer {
+      padding: 50px 0;
+
       width: 50%;
 
       > * {
+        display: block;
+
         margin: auto;
 
         width: 70%;
@@ -40,6 +44,7 @@ section.aboutSection {
       h2 {
         margin-bottom: 20px;
 
+        line-height: 1;
         font-size: 5rem;
 
         span.highlight {
@@ -51,6 +56,10 @@ section.aboutSection {
         margin-bottom: 10px;
 
         opacity: 0.8;
+
+        &:last-of-type {
+          margin-bottom: 40px;
+        }
       }
     }
 
@@ -106,8 +115,13 @@ section.aboutSection {
       }
 
       .imageContainer {
+        margin: auto;
+
         width: 100%;
         max-width: 400px;
+        aspect-ratio: 1;
+
+        border-radius: 50%;
       }
     }
   }
