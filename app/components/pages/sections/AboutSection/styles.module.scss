@@ -57,9 +57,13 @@ section.aboutSection {
     .imageContainer {
       position: relative;
 
-      aspect-ratio: 658 / 772;
+      aspect-ratio: 679 / 800;
 
       width: 50%;
+
+      overflow: hidden;
+
+      border-radius: 50px;
     }
   }
 
