@@ -8,7 +8,7 @@ interface BaseProps {
   
   variant?: 'outlined' | 'flat' | 'blur'
 
-  large?: boolean
+  icon?: boolean
 }
 
 type ActionButtonProps = BaseProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -24,7 +24,10 @@ function ButtonContent({ children, appendIcon }: BaseProps) {
     { children }
 
     {
-      !!appendIcon && <span className={styles.appendIcon}>{ appendIcon }</span>
+      !!appendIcon &&
+        <span className={styles.appendIcon}>
+          { appendIcon }
+        </span>
     }
   </>
 }
@@ -36,22 +39,29 @@ export function DefaultButton({
   
   variant,
 
-  large,
+  icon,
   link,
+
+  style,
 
   ...rest
 }: (ActionButtonProps | LinkButtonProps) & BaseProps) {
   const classNameArr = [styles.defaultButton, styles[variant || 'outlined']]
 
-  if (large) {
-    classNameArr.push(styles.large)
+  if (icon) {
+    classNameArr.push(styles.icon)
   }
 
   const nodeItems = { children, appendIcon }
 
+  const customStyles = style ?? {
+    minWidth: icon ? '50px' : '170px',
+  }
+
   return link
     ? <a
         className={classNameArr.join(' ')}
+        style={customStyles}
         {...rest as LinkButtonProps}
       >
         <ButtonContent {...rest} {...nodeItems} />
@@ -59,6 +69,7 @@ export function DefaultButton({
 
     : <button
         className={classNameArr.join(' ')}
+        style={customStyles}
         {...rest as ActionButtonProps}
       >
         <ButtonContent {...rest} {...nodeItems} />

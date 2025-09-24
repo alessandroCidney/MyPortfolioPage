@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import styles from './styles.module.scss'
 
-import { DefaultButton } from '../../commons/DefaultButton'
+import { DefaultButton } from '../../../commons/DefaultButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 

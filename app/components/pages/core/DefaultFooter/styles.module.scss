@@ -1,0 +1,26 @@
+footer.defaultFooter {
+  .letsWorkTogetherArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 40px;
+
+    min-height: 800px;
+
+    background-color: var(--theme-primary-darken-1-color);
+
+    text-align: center;
+
+    h1 {
+      font-size: 5rem;
+    }
+  }
+
+  .footerContent {
+    min-height: 400px;
+
+    background-color: #00003D;
+  }
+}
