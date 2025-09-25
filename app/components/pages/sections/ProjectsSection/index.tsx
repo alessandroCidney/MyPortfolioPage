@@ -2,6 +2,34 @@ import styles from './styles.module.scss'
 import { ProjectsCarousel } from './components/ProjectsCarousel'
 
 export function ProjectsSection() {
+  const mainProjectsArr = [
+    {
+      title: 'Document Analyzer',
+      description: `Plataforma para análise e validação de documentos utilizando inteligência artificial.`,
+
+      imageSrc: '/images/illustrations/document-analysis.svg',
+      projectUrl: 'https://santodigital.com.br/santoid/',
+    },
+    
+    {
+      title: 'AI Assistant',
+      description: 'Assistente baseado em IA generativa, com funções diversas como geração de texto, imagens e código.',
+
+      imageSrc: '/images/illustrations/ai-assistant.svg',
+      projectUrl: 'https://santodigital.com.br/santoai/',
+    }
+  ]
+
+  const personalProjectsArr = [
+    {
+      title: 'MoneySpy',
+      description: 'Plataforma para organização e análise de gastos pessoais, com relatórios diversos e sistema de gamificação embutido.',
+
+      imageSrc: '/images/illustrations/blue-money-spy.svg',
+      projectUrl: 'http://localhost:3000'
+    }
+  ]
+
   return (
     <section
       id='projects'
@@ -19,7 +47,9 @@ export function ProjectsSection() {
         </div>
 
         <div className={styles.projectsCarousel}>
-          <ProjectsCarousel />
+          <ProjectsCarousel
+            items={mainProjectsArr}
+          />
         </div>
       </div>
 
@@ -35,7 +65,10 @@ export function ProjectsSection() {
         </div>
 
         <div className={styles.projectsCarousel}>
-          <ProjectsCarousel reversed />
+          <ProjectsCarousel
+            items={personalProjectsArr}
+            reversed
+          />
         </div>
       </div>
     </section>
