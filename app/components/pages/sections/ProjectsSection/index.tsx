@@ -8,7 +8,7 @@ export function ProjectsSection() {
       description: `Plataforma para análise e validação de documentos utilizando inteligência artificial.`,
 
       imageSrc: '/images/illustrations/document-analysis.svg',
-      projectUrl: 'https://santodigital.com.br/santoid/',
+      projectUrl: process.env.NEXT_PUBLIC_DOCUMENT_ANALYZER_URL ?? '',
     },
     
     {
@@ -16,7 +16,7 @@ export function ProjectsSection() {
       description: 'Assistente baseado em IA generativa, com funções diversas como geração de texto, imagens e código.',
 
       imageSrc: '/images/illustrations/ai-assistant.svg',
-      projectUrl: 'https://santodigital.com.br/santoai/',
+      projectUrl: process.env.NEXT_PUBLIC_AI_ASSISTANT_URL ?? '',
     }
   ]
 
@@ -26,7 +26,7 @@ export function ProjectsSection() {
       description: 'Plataforma para organização e análise de gastos pessoais, com relatórios diversos e sistema de gamificação embutido.',
 
       imageSrc: '/images/illustrations/blue-money-spy.svg',
-      projectUrl: 'http://localhost:3000'
+      projectUrl: process.env.NEXT_PUBLIC_MONEYSPY_URL ?? '',
     }
   ]
 

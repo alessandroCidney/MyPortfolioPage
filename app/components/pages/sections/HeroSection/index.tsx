@@ -38,7 +38,7 @@ export function HeroSection() {
       <div className={styles.personImageContainer}>
         <Image
           alt='Pessoa acenando com a mão'
-          src='/images/illustrations/person-hello.png'
+          src='/images/illustrations/tinified-person-hello.png'
           fill
         />
       </div>

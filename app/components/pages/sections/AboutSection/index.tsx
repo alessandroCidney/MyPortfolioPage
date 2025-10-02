@@ -60,7 +60,7 @@ export function AboutSection() {
 
         <div className={styles.imageContainer}>
           <Image
-            src='/images/photos/selfie.png'
+            src='/images/photos/tinified-selfie.jpg'
             alt='Uma fotografia minha.'
             objectFit='cover'
             fill

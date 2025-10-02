@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { Metadata } from "next";
 
-import { DefaultButton } from "./components/commons/DefaultButton";
 import { DefaultHeader } from './components/pages/core/DefaultHeader';
 
 import styles from './styles.module.scss'
@@ -13,6 +11,10 @@ import { ProjectsSection } from "./components/pages/sections/ProjectsSection";
 import { ExperienceSection } from "./components/pages/sections/ExperienceSection";
 import { HardSkillsSection } from "./components/pages/sections/HardSkillsSection";
 import { DefaultFooter } from "./components/pages/core/DefaultFooter";
+
+export const metadata: Metadata = {
+ title: 'Portfólio - Alessandro Cídney',
+}
 
 export default function Home() {
   return (
