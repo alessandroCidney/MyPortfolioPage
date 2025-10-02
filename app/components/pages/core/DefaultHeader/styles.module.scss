@@ -87,6 +87,10 @@ header.defaultHeader {
 
     top: 0;
     padding: 0 5%;
+
+    a:last-of-type {
+      min-width: auto !important;
+    }
   }
 }
 

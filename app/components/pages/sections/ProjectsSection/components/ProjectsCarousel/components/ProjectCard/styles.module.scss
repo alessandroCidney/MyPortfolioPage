@@ -121,3 +121,13 @@
     aspect-ratio: 3 / 4;
   }
 }
+
+@media (max-width: 600px) {
+  .projectCard {
+    padding-bottom: 40px;
+
+    width: 280px;
+
+    aspect-ratio: auto;
+  }
+}

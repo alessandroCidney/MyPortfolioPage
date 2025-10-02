@@ -18,6 +18,8 @@
   .contentContainer {
     position: absolute;
 
+    max-width: 100%;
+
     bottom: 0;
 
     padding: 50px;
@@ -33,6 +35,24 @@
       font-weight: bold;
 
       opacity: .5;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .experienceSection {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 600px) {
+  .experienceSection {
+    .contentContainer {
+      padding: 20px;
+
+      h2 {
+        font-size: 3rem;
+      }
     }
   }
 }

@@ -46,3 +46,20 @@
     }
   }
 }
+
+
+@media (max-width: 600px) {
+  .projectsSection {
+    .contentContainer {
+      .titleContainer {
+        h2 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

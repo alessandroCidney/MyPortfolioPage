@@ -126,3 +126,17 @@ section.aboutSection {
     }
   }
 }
+
+@media (max-width: 600px) {
+  section.aboutSection {
+    .contentContainer {
+      padding: 40px;
+
+      .textContainer {
+        h2 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}

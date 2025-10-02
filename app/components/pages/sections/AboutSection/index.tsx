@@ -49,7 +49,8 @@ export function AboutSection() {
               target='_blank'
               variant='flat'
               style={{
-                minWidth: '300px'
+                width: '300px',
+                maxWidth: '100%',
               }}
               link
             >
