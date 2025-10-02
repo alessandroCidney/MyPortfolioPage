@@ -37,15 +37,17 @@ export function DefaultHeader() {
         userScrolledDown ? styles.userScrolledDown : ''
       ].join(' ')}
     >
-      <Link href='#'>
-        <Image
-          src='/images/texts/ac.png'
-          alt='Meu nome'
-          width={55}
-          height={34}
-          onClick={scrollToTop}
-        />
-      </Link>
+      <h1>
+        <Link href='#'>
+          <Image
+            src='/images/texts/ac.png'
+            alt='Portfólio - Alessandro Cídney'
+            width={55}
+            height={34}
+            onClick={scrollToTop}
+          />
+        </Link>
+      </h1>
 
       <nav className={styles.defaultNav}>
         <ul>
