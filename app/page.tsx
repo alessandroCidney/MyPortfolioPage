@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 
 import { DefaultHeader } from './components/pages/core/DefaultHeader';
 
@@ -14,6 +14,10 @@ import { DefaultFooter } from "./components/pages/core/DefaultFooter";
 
 export const metadata: Metadata = {
  title: 'Portfólio - Alessandro Cídney',
+}
+
+export const viewport: Viewport = {
+  colorScheme: 'light',
 }
 
 export default function Home() {
