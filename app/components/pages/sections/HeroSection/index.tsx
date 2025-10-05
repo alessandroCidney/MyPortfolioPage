@@ -20,7 +20,7 @@ export function HeroSection() {
 
         <div className={styles.textContainer}>
           <p>
-            Olá, bem vindo ao meu portfólio! Me chamo <strong>Alessandro Cídney</strong>, e sou um <strong>desenvolvedor web</strong> apaixonado por construir interfaces incríveis.
+            Olá, bem vindo ao meu portfólio! Me chamo <strong>Alessandro Cídney</strong>, e sou um <strong>desenvolvedor front-end</strong> apaixonado por construir interfaces incríveis.
           </p>
 
           <DefaultButton

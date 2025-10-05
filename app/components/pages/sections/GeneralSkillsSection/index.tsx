@@ -8,7 +8,7 @@ export function GeneralSkillsSection() {
       <header>
         <h2>
           <span>
-            O <span className={styles.highlight}>desenvolvedor web</span>
+            O <span className={styles.highlight}>desenvolvedor front-end</span>
           </span>
           
           <br />

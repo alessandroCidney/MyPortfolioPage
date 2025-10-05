@@ -21,7 +21,7 @@ export function AboutSection() {
           </h2>
 
           <p>
-            Olá, me chamo Alessandro Cídney! Sou um desenvolvedor web com quase 4 anos de experiência na criação de websites e interfaces.
+            Olá, me chamo Alessandro Cídney! Sou um desenvolvedor front-end com quase 4 anos de experiência na criação de websites e interfaces.
           </p>
 
           <p>

@@ -16,7 +16,7 @@ export function ShareButton() {
   async function navigatorShare() {
     const shareData = {
       title: 'Portfólio - Alessandro Cídney',
-      text: 'O desenvolvedor web que você estava procurando!',
+      text: 'O desenvolvedor front-end que você estava procurando!',
       url: window.location.origin,
     }
 
