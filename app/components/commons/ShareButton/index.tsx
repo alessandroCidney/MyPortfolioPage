@@ -1,13 +1,13 @@
 'use client'
 
-import { useState } from "react";
+import { useState } from 'react'
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faShareNodes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle, faShareNodes } from '@fortawesome/free-solid-svg-icons'
 
-import { DefaultButton } from "../DefaultButton";
+import { DefaultButton } from '../DefaultButton'
 
-import { wait } from "@/app/utils";
+import { wait } from '@/app/utils'
 
 export function ShareButton() {
   const [currentText, setCurrentText] = useState('Compartilhar')

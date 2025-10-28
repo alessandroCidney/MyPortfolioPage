@@ -30,7 +30,7 @@ export function DefaultFooter() {
           style={{
             backgroundColor: 'var(--theme-primary-color)',
             minWidth: '200px',
-            fontSize: '5rem'
+            fontSize: '5rem',
           }}
           variant='flat'
           link
@@ -39,7 +39,7 @@ export function DefaultFooter() {
           <FontAwesomeIcon
             icon={faArrowRight}
             style={{
-              transform: 'translate(-50%, -50%) rotate(-45deg)'
+              transform: 'translate(-50%, -50%) rotate(-45deg)',
             }}
           />
         </DefaultButton>

@@ -1,4 +1,4 @@
-export function debounce (callback: () => void, wait: number) {
+export function debounce(callback: () => void, wait: number) {
   let timeoutId: number
 
   return () => {
@@ -7,7 +7,7 @@ export function debounce (callback: () => void, wait: number) {
     timeoutId = window.setTimeout(() => {
       callback()
     }, wait)
-  };
+  }
 }
 
 export function wait(ms: number) {

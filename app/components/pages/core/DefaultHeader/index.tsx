@@ -1,16 +1,16 @@
 'use client'
 
-import Link from "next/link";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import Link from 'next/link'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
-import { getScrollPosition, scrollToTop } from "@/app/utils/scroll";
-import { debounce } from "@/app/utils";
+import { getScrollPosition, scrollToTop } from '@/app/utils/scroll'
+import { debounce } from '@/app/utils'
 
-import { DefaultButton } from "../../../commons/DefaultButton";
+import { DefaultButton } from '../../../commons/DefaultButton'
 
 import styles from './styles.module.scss'
 
@@ -29,12 +29,12 @@ export function DefaultHeader() {
     return () => {
       window.removeEventListener('scroll', debouncedCheckScroll)
     }
-  }, [checkScroll])
+  }, [debouncedCheckScroll])
   return (
     <header
       className={[
         styles.defaultHeader,
-        userScrolledDown ? styles.userScrolledDown : ''
+        userScrolledDown ? styles.userScrolledDown : '',
       ].join(' ')}
     >
       <h1>

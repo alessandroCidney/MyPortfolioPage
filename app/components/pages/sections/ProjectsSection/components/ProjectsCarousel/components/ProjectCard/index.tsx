@@ -48,7 +48,7 @@ export function ProjectCard(props: ProjectCardProps) {
           <FontAwesomeIcon
             icon={faArrowRight}
             style={{
-              transform: 'rotate(-45deg)'
+              transform: 'rotate(-45deg)',
             }}
           />
         </div>

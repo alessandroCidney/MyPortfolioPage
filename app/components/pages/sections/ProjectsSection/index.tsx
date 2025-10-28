@@ -5,7 +5,7 @@ export function ProjectsSection() {
   const mainProjectsArr = [
     {
       title: 'Document Analyzer',
-      description: `Plataforma para análise e validação de documentos utilizando inteligência artificial.`,
+      description: 'Plataforma para análise e validação de documentos utilizando inteligência artificial.',
 
       imageSrc: '/images/illustrations/document-analysis.svg',
       projectUrl: process.env.NEXT_PUBLIC_DOCUMENT_ANALYZER_URL ?? '',
@@ -17,7 +17,7 @@ export function ProjectsSection() {
 
       imageSrc: '/images/illustrations/ai-assistant.svg',
       projectUrl: process.env.NEXT_PUBLIC_AI_ASSISTANT_URL ?? '',
-    }
+    },
   ]
 
   const personalProjectsArr = [
@@ -27,7 +27,7 @@ export function ProjectsSection() {
 
       imageSrc: '/images/illustrations/blue-money-spy.svg',
       projectUrl: process.env.NEXT_PUBLIC_MONEYSPY_URL ?? '',
-    }
+    },
   ]
 
   return (

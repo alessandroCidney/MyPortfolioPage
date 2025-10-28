@@ -66,18 +66,18 @@ export function DefaultButton({
 
   return link
     ? <a
-        className={classNameArr.join(' ')}
-        style={customStyles}
-        {...rest as LinkButtonProps}
-      >
-        <ButtonContent {...rest} {...nodeItems} />
-      </a>
+      className={classNameArr.join(' ')}
+      style={customStyles}
+      {...rest as LinkButtonProps}
+    >
+      <ButtonContent {...rest} {...nodeItems} />
+    </a>
 
     : <button
-        className={classNameArr.join(' ')}
-        style={customStyles}
-        {...rest as ActionButtonProps}
-      >
-        <ButtonContent {...rest} {...nodeItems} />
-      </button>
+      className={classNameArr.join(' ')}
+      style={customStyles}
+      {...rest as ActionButtonProps}
+    >
+      <ButtonContent {...rest} {...nodeItems} />
+    </button>
 }
